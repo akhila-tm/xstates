@@ -80,7 +80,7 @@ function Location(){
     </select>
     </div>
     {selectedCountry && selectedCity && selectedState &&
-        <p>You selected <span className='selectedCity'>{selectedCity}</span>,<span className='selectedState'>{selectedState}</span> ,<span className='selectedState'>{selectedCountry}</span> </p>
+    <p>You selected {selectedCity}, {selectedState}, {selectedCountry}</p>
     }
    
     </>)
