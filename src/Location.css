@@ -1,0 +1,19 @@
+.dropdownFlex{
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 100px;
+}
+select{
+    width: 100%;
+    height: 50px;
+}
+.selectedCity{
+    font-size: larger;
+    font-weight: 600;
+}
+.selectedState{
+    font-size:medium;
+    font-weight: 600;
+    color: gray;
+}
