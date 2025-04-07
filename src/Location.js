@@ -21,7 +21,8 @@ function Location(){
     },[])
 
     const handleCountryChange=(event)=>{
-        console.log(event.target.value)
+        setSelectedState("");
+        setSelectedCity("");
         setSelectedCountry(event.target.value)
         getStates(event.target.value)
     }
@@ -29,11 +30,13 @@ function Location(){
         fetch(`https://crio-location-selector.onrender.com/country=${payload}/states`)
         .then((response) => response.json())
         .then((data) => {
-          setStates(data)
+            setStates(data);
+            setCities([]);
         })
         .catch((error) => console.error(error));
     }
     const handleStateChange=(event)=>{
+        setSelectedCity("");
         setSelectedState(event.target.value)
         getCities(event.target.value)
     }
